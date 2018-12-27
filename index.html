@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        //Challenge to find anagrams of a word, given a word and an array of words to check against. Given "abba" as the word, and 
+        // ['baba', 'bcdc', 'baab', 'dode'] as the array of words to check, expected output is ['baba', 'baab']
+
+        var wordToCheck = 'abba'
+
+        var wordBank = ['baba', 'bcdc', 'baab', 'dode']
+
+        var matches = [];
+
+        function wordOrder (word){
+        word = word.split('').sort().join('')
+        //   console.log(word)
+        return word
+        }
+
+        function checkMatch(array){
+        for (x = 0; x < array.length; x++){
+            if (wordOrder(array[x]) === wordOrder(wordToCheck)){
+            matches.push(array[x])
+            }
+        }
+        console.log(matches)
+        return matches
+        }
+
+        checkMatch(wordBank)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
