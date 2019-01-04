@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    // Input: candidates = [10,1,2,7,6,1,5], target = 8,
+// A solution set is:
+// [
+//   [1, 7],
+//   [1, 2, 5],
+//   [2, 6],
+//   [1, 1, 6]
+// ]
+
+var numbers = [10, 1, 2, 7, 6, 1, 5];
+var targetNum = 8;
+
+function combinationSum (candidates, target){
+  candidates.sort();
+  for (x = 0; x < candidates.length; x++){
+    if (candidates[x] === target){
+      var solutionSet = .push(candidates[x]);
+    } 
+  }
+}
+
+combinationSum(numbers, targetNum)
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
