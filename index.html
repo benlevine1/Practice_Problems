@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    var myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
+// groupArray(myArray);
+// Output - [['hello, 'goodbye', '25'], [34, 56, 12], [true, false, true]]
+
+    function groupArray(array){
+      var string = [];
+      var number = [];
+      var boolean = [];
+      var newArray = [];
+      for (var x = 0; x < array.length; x++){
+        if (typeof array[x] === "string"){
+          string.push(array[x])
+        }else if (typeof array[x] === "number"){
+          number.push(array[x])
+        }else if (typeof array[x] === "boolean") {
+          boolean.push(array[x])
+        }
+      }
+      newArray.push(string, number, boolean)
+      console.log(newArray)
+    }
+    groupArray(myArray);
+  </script>
+</head>
+
+<body>
+  
+</body>
+</html>
